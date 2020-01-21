@@ -3,6 +3,7 @@ require 'directors_database'
 
 pp directors_database
 
+<<<<<<< HEAD
 def gross_for_director(nds, row_index)
   total_gross = 0
   movie_index = 0 
@@ -12,6 +13,18 @@ def gross_for_director(nds, row_index)
     movie_index += 1 
   end
   p total_gross
+=======
+
+
+def gross_for_director(nds, row_index)
+  total_gross = 0
+  movie_index = 0 
+  while movie_index < nds[row_index][:movies].length do
+    total_gross += nds[row_index][:movies][movie_index][:worldwide_gross]
+    movie_index += 1 
+  end
+  total_gross
+>>>>>>> 8fb4caef408720d886e99d550d828828f023783d
 end
 
 gross_for_director(directors_database, 0)
@@ -33,4 +46,8 @@ def directors_totals(nds)
   return directors_box_office
 end 
 
+<<<<<<< HEAD
+=======
+gross_for_director(directors_database, 1)
+>>>>>>> 8fb4caef408720d886e99d550d828828f023783d
 directors_totals(directors_database)
